@@ -1,0 +1,25 @@
+.ruby-blog__home-container {
+  background: #f9f9f9;
+  padding: 2rem 5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  height: 200vh;
+}
+
+.ruby-blog__home-container__content {
+  flex: 2;
+  margin-right: 2rem;
+}
+
+.ruby-blog__home-container__sideBar {
+  flex: 0.6;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50vh;
+
+  padding-top: 2rem;
+}

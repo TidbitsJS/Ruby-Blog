@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoIosCloseCircle } from "react-icons/io";
+import RecentPost from "../../components/RecentPost";
+import TagLine from "../../components/TagLine";
 
 import "./header.css";
 
@@ -58,36 +60,11 @@ const Header = () => {
                   Tags
                 </p>
                 <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__tagslist">
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag">
-                    <p>Apple</p>
-                    <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount">
-                      <div>8</div>
-                    </div>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag">
-                    <p>Google</p>
-                    <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount">
-                      <div>7</div>
-                    </div>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag">
-                    <p>Review</p>
-                    <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount">
-                      <div>3</div>
-                    </div>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag">
-                    <p>Tips & Tricks</p>
-                    <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount">
-                      <div>5</div>
-                    </div>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag">
-                    <p>Wearable</p>
-                    <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount">
-                      <div>4</div>
-                    </div>
-                  </div>
+                  <TagLine title="Apple" count={8} />
+                  <TagLine title="Google" count={7} />
+                  <TagLine title="Review" count={3} />
+                  <TagLine title="Tips & Tricks" count={5} />
+                  <TagLine title="Wearable" count={4} />
                 </div>
               </div>
 
@@ -96,18 +73,15 @@ const Header = () => {
                   Recent Posts
                 </p>
                 <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-posts">
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post">
-                    <h5>What's on My iPhone?</h5>
-                    <p>May 9, 2019</p>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post">
-                    <h5>Is Chromebook Still a Thing?</h5>
-                    <p>May 9, 2019</p>
-                  </div>
-                  <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post">
-                    <h5>Do You Need an Apple TV?</h5>
-                    <p>May 9, 2019</p>
-                  </div>
+                  <RecentPost title="What's on My iPhone?" date="May 9, 2019" />
+                  <RecentPost
+                    title="Is Chromebook Still a Thing?"
+                    date="May 9, 2019"
+                  />
+                  <RecentPost
+                    title="Do You Need an Apple TV?"
+                    date="May 9, 2019"
+                  />
                 </div>
               </div>
             </div>

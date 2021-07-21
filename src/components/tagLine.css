@@ -1,0 +1,35 @@
+.taglist-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7rem 0rem;
+
+  cursor: pointer;
+}
+
+.taglist-tag p {
+  font-family: "Dosis", sans-serif;
+  text-transform: capitalize;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.taglist-tagCount {
+  display: flex;
+}
+
+.taglist-tagCount div {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+}

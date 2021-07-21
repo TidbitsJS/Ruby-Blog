@@ -1,0 +1,38 @@
+.ruby_blog__shortcutBar-container__tagsBar,
+.ruby_blog__shortcutBar-container__recentPostsBar {
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 3rem;
+  border-radius: 7px;
+}
+
+.ruby_blog__shortcutBar-container__tagsBar-head,
+.ruby_blog__shortcutBar-container__recentPostsBar-head {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 0.7rem 1rem;
+}
+
+.ruby_blog__shortcutBar-container__tagsBar-head p,
+.ruby_blog__shortcutBar-container__recentPostsBar-head p {
+  font-family: "Open Sans", sans-serif;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ruby-blog__shortcutBar-container__tagsBar-content,
+.ruby-blog__shortcutBar-container__recentPostsBar-content {
+  padding: 0.5rem 1rem;
+}
+
+.ruby-blog__shortcutBar-container__tagsBar-content .taglist-tag {
+  margin: 1rem 0;
+}
+
+.ruby-blog__shortcutBar-container__recentPostsBar-content .recentPosts-post {
+  margin: 1.25rem 0;
+}
