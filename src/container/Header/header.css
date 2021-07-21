@@ -1,0 +1,214 @@
+.ruby-blog__header-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  background: #f0f5ff;
+  position: relative;
+}
+
+.ruby-blog__header-container__logo {
+  flex: 1;
+  font-size: 25px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+}
+
+.ruby-blog__header-container__nav {
+  flex: 1.8;
+  display: flex;
+}
+
+.ruby-blog__header-container__nav ul {
+  display: flex;
+}
+
+.ruby-blog__header-container__nav ul li {
+  list-style: none;
+  margin: 0 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ruby-blog__header-container__nav-smallDevice {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .ruby-blog__header-container__nav {
+    display: none;
+  }
+
+  .ruby-blog__header-container__nav-smallDevice {
+    display: flex;
+  }
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar {
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 75vw;
+  height: 100vh;
+  left: 25%;
+  top: 0%;
+
+  padding: 1rem;
+  overflow-y: scroll;
+  box-shadow: -1px 0px 15px rgb(170, 170, 170, 0.15);
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-close {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1.5rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__navlinks {
+  display: flex;
+  margin: 1rem 0rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__navlinks ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__navlinks ul li {
+  list-style: none;
+  margin: 0.5rem 0rem;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__tags {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__tags-heading,
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-heading {
+  font-size: 15px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #aaa;
+
+  margin-bottom: 0.7rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__tagsList {
+  display: flex;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7rem 0rem;
+
+  cursor: pointer;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tag p {
+  font-family: "Dosis", sans-serif;
+  text-transform: capitalize;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount {
+  display: flex;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__taglist-tagCount
+  div {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-posts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.4rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0.5rem 0rem;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post
+  h5 {
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.ruby-blog__header-container__nav-smallDevice__sidebar-content__recentPosts-post
+  p {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  color: #aaa;
+  font-weight: 600;
+}
