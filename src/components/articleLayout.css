@@ -107,3 +107,22 @@ h6 {
   letter-spacing: 1px;
   font-size: 15px;
 }
+
+.ruby-blog__article-layout__container__content img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 330px) {
+  .ruby-blog__article-layout__container__head {
+    padding: 1rem 0rem;
+  }
+
+  .ruby-blog__article-layout__container__date {
+    padding: 0.8rem 1rem;
+  }
+
+  .ruby-blog__article-layout__container__content {
+    padding: 2rem 1rem;
+  }
+}

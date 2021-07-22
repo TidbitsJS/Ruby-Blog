@@ -10,7 +10,7 @@ import "./articlePage.css";
 
 const ArticlePage = () => {
   return (
-    <div className="ruby-blog__home-container">
+    <div className="ruby-blog__home-container-articlePage">
       <div className="ruby-blog__home-container-articlePage__content">
         <div className="ruby-blog__home-container__content-article-suggestion">
           <div className="ruby-blog__home-container__content-article-suggestion-heading">
