@@ -2,18 +2,20 @@ import React from "react";
 
 import "./fancyArticleCard.css";
 
-const FancyArticleCard = () => {
+const FancyArticleCard = (props) => {
+  let article = props.data;
+
   return (
     <div className="fancy-article-card__container">
       <div className="fancy-article-card__container__image-div">
-        <img src="https://source.unsplash.com/1600x900/?car" alt="something" />
+        <img src={article.img} alt={article.title} />
       </div>
       <div className="fancy-article-card__container__content-div">
         <div className="basic-article-card__container__content-div__tag">
-          <div>Google</div>
+          <div>{article.tag}</div>
         </div>
         <div className="basic-article-card__container__content-div__title">
-          <h2>Is Chromebook Still a Thing</h2>
+          <h2>{article.title}</h2>
         </div>
         <div className="basic-article-card__container__content-div__end">
           <div className="basic-article-card__container__content-div__end-readMore">
@@ -21,10 +23,7 @@ const FancyArticleCard = () => {
           </div>
           <div className="basic-article-card__container__content-div__end-authors">
             <div className="basic-article-card__container__content-div__end-authors__circle">
-              <img
-                src="https://source.unsplash.com/1600x900/?nature"
-                alt="author"
-              />
+              <img src={article.author} alt={article.title + article.tag} />
             </div>
           </div>
         </div>

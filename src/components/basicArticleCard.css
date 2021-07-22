@@ -54,6 +54,7 @@
   font-weight: 700;
   padding: 0.15rem 0.5rem;
   border-radius: 15px;
+  text-transform: capitalize;
 
   cursor: pointer;
 }

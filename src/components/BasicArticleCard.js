@@ -2,27 +2,22 @@ import React from "react";
 
 import "./basicArticleCard.css";
 
-const BasicArticleCard = () => {
+const BasicArticleCard = (props) => {
+  let article = props.data;
   return (
     <div className="basic-article-card__container">
       <div className="basic-article-card__container__image-div">
-        <img
-          src="https://source.unsplash.com/1600x900/?computer"
-          alt="something"
-        />
+        <img src={article.img} alt={article.title} />
       </div>
       <div className="basic-article-card__container__content-div">
         <div className="basic-article-card__container__content-div__tag">
-          <div>Google</div>
+          <div>{article.tag}</div>
         </div>
         <div className="basic-article-card__container__content-div__title">
-          <h2>Is Chromebook Still a Thing</h2>
+          <h2>{article.title}</h2>
         </div>
         <div className="basic-article-card__container__content-div__para">
-          <p>
-            Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris
-            finibus.
-          </p>
+          <p>{article.desc}</p>
         </div>
         <div className="basic-article-card__container__content-div__end">
           <div className="basic-article-card__container__content-div__end-readMore">
@@ -30,10 +25,7 @@ const BasicArticleCard = () => {
           </div>
           <div className="basic-article-card__container__content-div__end-authors">
             <div className="basic-article-card__container__content-div__end-authors__circle">
-              <img
-                src="https://source.unsplash.com/1600x900/?nature"
-                alt="author"
-              />
+              <img src={article.author} alt={article.title + article.tag} />
             </div>
           </div>
         </div>
