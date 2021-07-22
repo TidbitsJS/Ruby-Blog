@@ -18,7 +18,7 @@
 
 .ruby_blog__shortcutBar-container__tagsBar-head,
 .ruby_blog__shortcutBar-container__recentPostsBar-head {
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid var(--light-gray-color);
   padding: 0.7rem 1rem;
 }
 
