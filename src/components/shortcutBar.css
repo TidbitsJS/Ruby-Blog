@@ -7,6 +7,13 @@
 
   margin-bottom: 3rem;
   border-radius: 7px;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.ruby_blog__shortcutBar-container__tagsBar:hover,
+.ruby_blog__shortcutBar-container__recentPostsBar:hover {
+  box-shadow: var(--shadow-base);
 }
 
 .ruby_blog__shortcutBar-container__tagsBar-head,
@@ -17,8 +24,8 @@
 
 .ruby_blog__shortcutBar-container__tagsBar-head p,
 .ruby_blog__shortcutBar-container__recentPostsBar-head p {
-  font-family: "Open Sans", sans-serif;
-  color: #aaa;
+  font-family: var(--font-base);
+  color: var(--secondary-text-color);
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;

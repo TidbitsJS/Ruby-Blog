@@ -6,16 +6,16 @@
 }
 
 .recentPosts-post h5 {
-  font-family: "Dosis", sans-serif;
+  font-family: var(--font-alt);
   font-size: 16px;
-  color: #1a1a1a;
+  color: var(--dark-gray-color);
   font-weight: 600;
 }
 
 .recentPosts-post p {
   font-size: 11px;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-base);
   text-transform: capitalize;
-  color: #aaa;
+  color: var(--secondary-text-color);
   font-weight: 600;
 }

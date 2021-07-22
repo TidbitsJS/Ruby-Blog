@@ -8,9 +8,9 @@
 }
 
 .taglist-tag p {
-  font-family: "Dosis", sans-serif;
+  font-family: var(--font-alt);
   text-transform: capitalize;
-  color: #1a1a1a;
+  color: var(--dark-gray-color);
   font-weight: 600;
   font-size: 15px;
 }
