@@ -1,0 +1,109 @@
+.ruby-blog__article-layout__container__head {
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid var(--light-gray-color);
+}
+
+.ruby-blog__article-layout__container__head-title {
+  display: flex;
+  text-align: left;
+
+  padding-left: 1rem;
+}
+
+.ruby-blog__article-layout__container__head-title h2 {
+  font-size: 22px;
+  font-family: var(--font-alt);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--dark-gray-color);
+}
+
+.ruby-blog__article-layout__container__date {
+  padding: 0.8rem 2rem;
+
+  display: flex;
+  text-align: left;
+}
+
+.ruby-blog__article-layout__container__date p {
+  color: var(--secondary-text-color);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font-base);
+}
+
+.ruby-blog__article-layout__container__date span::before {
+  content: "\02022";
+  font-family: serif;
+  padding: 0 8px;
+}
+
+.ruby-blog__article-layout__container__image-div {
+  display: flex;
+}
+
+.ruby-blog__article-layout__container__image-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.ruby-blog__article-layout__container__content {
+  padding: 2rem;
+  font-family: var(--font-base);
+}
+
+.ruby-blog__article-layout__container__content p {
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: var(--font-base);
+  color: var(--dark-gray-color);
+  margin: 1.5rem 0;
+}
+
+.ruby-blog__article-layout__container__content h2,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 23px;
+  font-family: var(--font-alt);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  color: var(--dark-gray-color);
+}
+
+.ruby-blog__article-layout__container__content blockquote {
+  border-left: 4px solid var(--dark-gray-color);
+  color: var(--dark-gray-color);
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: var(--font-base);
+
+  padding: 0rem 1rem;
+}
+
+.ruby-blog__article-layout__container__content ul {
+  padding: 0.5rem;
+}
+
+.ruby-blog__article-layout__container__content li {
+  margin: 0.3rem 0;
+  font-family: var(--font-base);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.ruby-blog__article-layout__container__content code {
+  font-family: var(--font-alt);
+  color: var(--dark-gray-color);
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
