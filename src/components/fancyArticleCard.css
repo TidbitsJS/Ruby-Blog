@@ -1,6 +1,6 @@
 .fancy-article-card__container {
   width: 270px;
-  min-height: 368px;
+  height: 368px;
   position: relative;
 
   margin: 1rem 0.9rem;
@@ -12,6 +12,10 @@
 
   border-radius: 7px;
   transition: box-shadow 0.3s var(--animation-base);
+
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .fancy-article-card__container::before {
@@ -62,10 +66,16 @@
   .basic-article-card__container__content-div__title {
   margin-bottom: 0;
 }
+
 .fancy-article-card__container__content-div
   .basic-article-card__container__content-div__end-readMore
   p {
   color: var(--white-color);
+}
+
+.fancy-article-card__container__content-div
+  .basic-article-card__container__content-div__end {
+  border-color: rgba(244, 244, 244, 0.466);
 }
 
 @media screen and (max-width: 300px) {

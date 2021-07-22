@@ -9,14 +9,22 @@ const Home = () => {
   return (
     <div className="ruby-blog__home-container">
       <div className="ruby-blog__home-container__content">
-        <BasicArticleCard />
-        <BasicArticleCard />
-        <FancyArticleCard />
-        <BasicArticleCard />
-        <FancyArticleCard />
-        <BasicArticleCard />
-        <FancyArticleCard />
-        <BasicArticleCard />
+        <div className="ruby-blog__home-container__content-article-div">
+          <BasicArticleCard />
+          <BasicArticleCard />
+          <FancyArticleCard />
+          <BasicArticleCard />
+          <FancyArticleCard />
+          <BasicArticleCard />
+          <FancyArticleCard />
+          <BasicArticleCard />
+        </div>
+        <div className="ruby-blog__home-container__content-spinner-div">
+          <div class="lds-ripple">
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
       <div className="ruby-blog__home-container__sideBar">
         <ShortcutBar />

@@ -13,8 +13,20 @@
   padding-top: 1rem;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.ruby-blog__home-container__content-article-div {
+  display: flex;
   flex-wrap: wrap;
+}
+
+.ruby-blog__home-container__content-spinner-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 1rem;
 }
 
 .ruby-blog__home-container__sideBar {
@@ -35,6 +47,10 @@
   .ruby-blog__home-container__content {
     flex: 1;
     margin-right: 0;
+  }
+
+  .ruby-blog__home-container__content-article-div {
+    justify-content: center;
   }
 }
 

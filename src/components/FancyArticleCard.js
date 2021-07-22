@@ -6,10 +6,7 @@ const FancyArticleCard = () => {
   return (
     <div className="fancy-article-card__container">
       <div className="fancy-article-card__container__image-div">
-        <img
-          src="https://source.unsplash.com/1600x900/?google"
-          alt="something"
-        />
+        <img src="https://source.unsplash.com/1600x900/?car" alt="something" />
       </div>
       <div className="fancy-article-card__container__content-div">
         <div className="basic-article-card__container__content-div__tag">

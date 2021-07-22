@@ -9,6 +9,10 @@
 
   border-radius: 7px;
   transition: box-shadow 0.3s var(--animation-base);
+
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .basic-article-card__container:hover {
