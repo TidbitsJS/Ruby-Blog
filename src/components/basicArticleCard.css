@@ -127,3 +127,9 @@
 
   cursor: pointer;
 }
+
+@media screen and (max-width: 300px) {
+  .basic-article-card__container {
+    margin: 1rem 0;
+  }
+}

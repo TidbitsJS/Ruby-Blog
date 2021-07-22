@@ -13,6 +13,7 @@
   padding-top: 1rem;
 
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -24,4 +25,21 @@
   height: 50vh;
 
   padding-top: 2rem;
+}
+
+@media screen and (max-width: 990px) {
+  .ruby-blog__home-container__sideBar {
+    display: none;
+  }
+
+  .ruby-blog__home-container__content {
+    flex: 1;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .ruby-blog__home-container {
+    padding: 1rem 0.5rem;
+  }
 }
