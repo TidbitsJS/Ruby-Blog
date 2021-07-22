@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./basicArticleCard.css";
+import Tag from "./Tag";
 
 const BasicArticleCard = (props) => {
   let article = props.data;
@@ -10,9 +11,7 @@ const BasicArticleCard = (props) => {
         <img src={article.img} alt={article.title} />
       </div>
       <div className="basic-article-card__container__content-div">
-        <div className="basic-article-card__container__content-div__tag">
-          <div>{article.tag}</div>
-        </div>
+        <Tag tag={article.tag} />
         <div className="basic-article-card__container__content-div__title">
           <h2>{article.title}</h2>
         </div>

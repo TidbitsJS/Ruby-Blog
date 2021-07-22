@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+.div__tag {
+  display: flex;
+
+  margin-bottom: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.div__tag div {
+  background: var(--black-color);
+  color: var(--white-color);
+  font-family: var(--font-base);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 15px;
+  text-transform: capitalize;
+
+  cursor: pointer;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;

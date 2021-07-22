@@ -1,6 +1,7 @@
 import React from "react";
 import BasicArticleCard from "../../../components/BasicArticleCard";
 import FancyArticleCard from "../../../components/FancyArticleCard";
+import PrimaryButton from "../../../components/PrimaryButton";
 import ShortcutBar from "../../../components/ShortcutBar";
 
 import articles from "../../../data/ArticlesData";
@@ -21,6 +22,7 @@ const Home = () => {
           })}
         </div>
         <div className="ruby-blog__home-container__content-spinner-div">
+          <PrimaryButton name="Load More" />
           <div class="lds-ripple">
             <div></div>
             <div></div>

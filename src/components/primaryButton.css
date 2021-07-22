@@ -1,0 +1,41 @@
+.ruby-blog__primary-button__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ruby-blog__primary-button__container-btn {
+  background-color: var(--black-color);
+  box-shadow: rgba(0, 0, 0, 0.37) 0px 2px 3px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: var(--font-base);
+  line-height: 1;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: #000 radial-gradient(circle, transparent 1%, #000 1%)
+    center/15000%;
+}
+
+.ripple:active {
+  background-color: #ffffff;
+  background-size: 100%;
+  transition: background 0s;
+}

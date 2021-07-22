@@ -39,26 +39,6 @@
   flex-direction: column;
 }
 
-.basic-article-card__container__content-div__tag {
-  display: flex;
-
-  margin-bottom: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
-}
-
-.basic-article-card__container__content-div__tag div {
-  background: var(--black-color);
-  color: var(--white-color);
-  font-family: var(--font-base);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 0.15rem 0.5rem;
-  border-radius: 15px;
-  text-transform: capitalize;
-
-  cursor: pointer;
-}
-
 .basic-article-card__container__content-div__title {
   display: flex;
   text-align: left;

@@ -23,6 +23,7 @@
 
 .ruby-blog__home-container__content-spinner-div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
