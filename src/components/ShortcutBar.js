@@ -24,9 +24,21 @@ const ShortcutBar = () => {
           <p>Recent Posts</p>
         </div>
         <div className="ruby-blog__shortcutBar-container__recentPostsBar-content">
-          <RecentPost title="What's on My iPhone?" date="May 9, 2019" />
-          <RecentPost title="Is Chromebook Still a Thing?" date="May 9, 2019" />
-          <RecentPost title="Do You Need an Apple TV?" date="May 9, 2019" />
+          <RecentPost
+            title="What's on My iPhone?"
+            date="May 9, 2019"
+            link="/article"
+          />
+          <RecentPost
+            title="Is Chromebook Still a Thing?"
+            date="May 9, 2019"
+            link="/article"
+          />
+          <RecentPost
+            title="Do You Need an Apple TV?"
+            date="May 9, 2019"
+            link="/article"
+          />
         </div>
       </div>
     </div>

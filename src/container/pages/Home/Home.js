@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BasicArticleCard from "../../../components/BasicArticleCard";
 import FancyArticleCard from "../../../components/FancyArticleCard";
 import PrimaryButton from "../../../components/PrimaryButton";
@@ -9,6 +9,10 @@ import articles from "../../../data/ArticlesData";
 import "./home.css";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="ruby-blog__home-container">
       <div className="ruby-blog__home-container__content">

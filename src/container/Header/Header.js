@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoIosCloseCircle } from "react-icons/io";
 import RecentPost from "../../components/RecentPost";
@@ -16,12 +17,16 @@ const Header = () => {
   return (
     <div className="ruby-blog__header-container">
       <div className="ruby-blog__header-container__logo">
-        <div>Ruby</div>
+        <div>
+          <Link to="/">Ruby</Link>
+        </div>
       </div>
       <div className="ruby-blog__header-container__nav">
         <nav>
           <ul>
-            <li>Home</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>Tag</li>
             <li>Author</li>
           </ul>

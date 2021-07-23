@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./fancyArticleCard.css";
 import Tag from "./Tag";
@@ -14,11 +15,15 @@ const FancyArticleCard = (props) => {
       <div className="fancy-article-card__container__content-div">
         <Tag tag={article.tag} />
         <div className="basic-article-card__container__content-div__title">
-          <h2>{article.title}</h2>
+          <h2>
+            <Link to="/article">{article.title}</Link>
+          </h2>
         </div>
         <div className="basic-article-card__container__content-div__end">
           <div className="basic-article-card__container__content-div__end-readMore">
-            <p>Read More</p>
+            <p>
+              <Link to="/article">Read More</Link>
+            </p>
           </div>
           <div className="basic-article-card__container__content-div__end-authors">
             <div className="basic-article-card__container__content-div__end-authors__circle">
