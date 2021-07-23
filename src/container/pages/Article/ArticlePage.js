@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ArticleLayout from "../../../components/ArticleLayout";
+import AuthorInfo from "../../../components/AuthorInfo";
 import BasicArticleCard from "../../../components/BasicArticleCard";
 import FancyArticleCard from "../../../components/FancyArticleCard";
 import ShortcutBar from "../../../components/ShortcutBar";
@@ -28,8 +29,18 @@ const ArticlePage = () => {
             }
           })}
         </div>
-        <div className="ruby-blog__home-container__content-article-display">
-          <ArticleLayout />
+        <div className="ruby-blog__home-container__content-display">
+          <div className="ruby-blog__home-container__content-article-display">
+            <ArticleLayout />
+          </div>
+          <div className="ruby-blog__home-container__content-author-display">
+            <AuthorInfo
+              title="Jose Walker"
+              imgURL="https://source.unsplash.com/1600x900/?animals"
+              address="Sydney, Australia"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            />
+          </div>
         </div>
       </div>
       <div className="ruby-blog__home-container__sideBar">

@@ -26,9 +26,19 @@
   top: 0;
 
   padding-top: 2rem;
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
 
   height: max-content;
+}
+
+.ruby-blog__home-container__content-display {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+
+  flex: 2;
+  width: 100%;
 }
 
 .ruby-blog__home-container__content-article-display {
@@ -37,10 +47,15 @@
 
   background: var(--white-color);
   border-radius: 7px;
-  margin-top: 1rem;
+}
 
-  flex: 2;
-  width: 100%;
+.ruby-blog__home-container__content-author-display {
+  display: flex;
+
+  background: var(--white-color);
+  border-radius: 7px;
+
+  margin-top: 2rem;
 }
 
 .ruby-blog__home-container__content-article-suggestion-heading {
