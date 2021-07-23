@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ArticleLayout from "../../../components/ArticleLayout";
 import AuthorInfo from "../../../components/AuthorInfo";
 import BasicArticleCard from "../../../components/BasicArticleCard";
@@ -9,10 +10,20 @@ import articles from "../../../data/ArticlesData";
 
 import "./articlePage.css";
 
-const ArticlePage = () => {
+const ArticlePage = (props) => {
+  const [articleData, setArticleData] = useState(null);
+  const { articleId } = useParams();
+
   useEffect(() => {
+    let theArticle = articles.filter(
+      (article) => article.articleId === articleId
+    );
+    setArticleData(...theArticle);
+    console.log("The article", theArticle, theArticle[0]);
     window.scrollTo(0, 0);
-  }, []);
+  }, [articleId]);
+
+  if (!articleData) return <div>Hello Empty</div>;
 
   return (
     <div className="ruby-blog__home-container-articlePage">
@@ -31,15 +42,10 @@ const ArticlePage = () => {
         </div>
         <div className="ruby-blog__home-container__content-display">
           <div className="ruby-blog__home-container__content-article-display">
-            <ArticleLayout />
+            <ArticleLayout data={articleData} />
           </div>
           <div className="ruby-blog__home-container__content-author-display">
-            <AuthorInfo
-              title="Jose Walker"
-              imgURL="https://source.unsplash.com/1600x900/?animals"
-              address="Sydney, Australia"
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            />
+            <AuthorInfo data={articleData} />
           </div>
         </div>
       </div>

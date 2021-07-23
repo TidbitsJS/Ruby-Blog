@@ -5,35 +5,30 @@ import mdFile from "../data/md/airPodsCool.md";
 import "./articleLayout.css";
 import Tag from "./Tag";
 
-const ArticleLayout = () => {
+const ArticleLayout = (props) => {
   const [mdText, setMdText] = useState(null);
 
   useEffect(() => {
     fetch(mdFile)
       .then((response) => response.text())
       .then((text) => setMdText(text));
-
-    console.log(mdText);
   }, [mdText]);
 
   return (
     <div className="ruby-blog__article-layout__container">
       <div className="ruby-blog__article-layout__container__head">
-        <Tag tag="Wearable" />
+        <Tag tag={props.data.tag} />
         <div className="ruby-blog__article-layout__container__head-title">
-          <h2>The Era of Smartwatches</h2>
+          <h2>{props.data.title}</h2>
         </div>
       </div>
       <div className="ruby-blog__article-layout__container__date">
         <p>
-          May 9, 2019 <span>1 min read</span>
+          {props.data.date} <span>{props.data.readTime} min read</span>
         </p>
       </div>
       <div className="ruby-blog__article-layout__container__image-div">
-        <img
-          src="https://source.unsplash.com/1600x900/?nature"
-          alt="article__layout__img"
-        />
+        <img src={props.data.img} alt="article__layout__img" />
       </div>
       <div className="ruby-blog__article-layout__container__content">
         <ReactMarkdown children={mdText} />

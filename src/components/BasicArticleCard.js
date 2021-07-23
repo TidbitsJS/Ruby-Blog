@@ -9,7 +9,12 @@ const BasicArticleCard = (props) => {
   return (
     <div className="basic-article-card__container">
       <div className="basic-article-card__container__image-div">
-        <Link to="/article">
+        <Link
+          to={{
+            pathname: `/${article.articleId}`,
+            state: article.articleId,
+          }}
+        >
           <img src={article.img} alt={article.title} />
         </Link>
       </div>
@@ -17,7 +22,14 @@ const BasicArticleCard = (props) => {
         <Tag tag={article.tag} />
         <div className="basic-article-card__container__content-div__title">
           <h2>
-            <Link to="/article">{article.title}</Link>
+            <Link
+              to={{
+                pathname: `/${article.articleId}`,
+                state: article.articleId,
+              }}
+            >
+              {article.title}
+            </Link>
           </h2>
         </div>
         <div className="basic-article-card__container__content-div__para">
@@ -26,7 +38,14 @@ const BasicArticleCard = (props) => {
         <div className="basic-article-card__container__content-div__end">
           <div className="basic-article-card__container__content-div__end-readMore">
             <p>
-              <Link to="/article">Read More</Link>
+              <Link
+                to={{
+                  pathname: `/${article.articleId}`,
+                  state: article.articleId,
+                }}
+              >
+                Read More
+              </Link>
             </p>
           </div>
           <div className="basic-article-card__container__content-div__end-authors">

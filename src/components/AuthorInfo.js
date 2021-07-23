@@ -7,6 +7,8 @@ import "./authorInfo.css";
 const AuthorInfo = (props) => {
   const [showSocial, setShowSocial] = useState(false);
 
+  console.log(props.data);
+
   const handleSocial = (value) => {
     setShowSocial(value);
   };
@@ -14,12 +16,12 @@ const AuthorInfo = (props) => {
   return (
     <div className="ruby-blog__author-info__container">
       <div className="ruby-blog__author-info__container__author-img-div">
-        <img src={props.imgURL} alt="author_img" />
+        <img src={props.data.author} alt="author_img" />
       </div>
       <div className="ruby-blog__author-info__container__content">
         <div className="ruby-blog__author-info__container__content__author-title">
           <h4 className="ruby-blog__author-info__container__content__author-titleh4">
-            {props.title}
+            {props.data.authorName}
           </h4>
 
           <div className="ruby-blog__author-info__container__content__author-social">
@@ -48,12 +50,12 @@ const AuthorInfo = (props) => {
         </div>
 
         <div className="ruby-blog__author-info__container__content__author-para">
-          {props.desc}
+          {props.data.desc}
         </div>
 
         <div className="ruby-blog__author-info__container__content__author-address">
           <TiLocation fontSize={13} style={{ marginRight: 3 }} />{" "}
-          {props.address}
+          {props.data.address}
         </div>
       </div>
     </div>
