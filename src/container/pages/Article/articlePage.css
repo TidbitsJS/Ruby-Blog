@@ -72,6 +72,18 @@
   letter-spacing: 1px;
 }
 
+.ruby-blog__home-container__content-post-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 7px;
+  margin-top: 2rem;
+}
+
+.ruby-blog__container__anotherPost-thumbnail:first-child {
+  margin-right: 1rem;
+}
+
 @media screen and (max-width: 990px) {
   .ruby-blog__home-container__content-article-suggestion {
     display: none;

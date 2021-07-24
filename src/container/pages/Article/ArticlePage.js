@@ -4,6 +4,7 @@ import ArticleLayout from "../../../components/ArticleLayout";
 import AuthorInfo from "../../../components/AuthorInfo";
 import BasicArticleCard from "../../../components/BasicArticleCard";
 import FancyArticleCard from "../../../components/FancyArticleCard";
+import PreviousNextPost from "../../../components/PreviousNextPost";
 import ShortcutBar from "../../../components/ShortcutBar";
 
 import articles from "../../../data/ArticlesData";
@@ -12,16 +13,26 @@ import "./articlePage.css";
 
 const ArticlePage = (props) => {
   const [articleData, setArticleData] = useState(null);
+  const [articleIndex, setArticleIndex] = useState(0);
   const { articleId } = useParams();
 
   useEffect(() => {
-    let theArticle = articles.filter(
-      (article) => article.articleId === articleId
-    );
+    let theArticle = articles.filter((article, index) => {
+      if (article.articleId === articleId) {
+        setArticleIndex(index);
+        return article;
+      }
+    });
     setArticleData(...theArticle);
-    console.log("The article", theArticle, theArticle[0]);
+    console.log(
+      "The article",
+      theArticle,
+      articleIndex,
+      articles[articleIndex - 1],
+      articles[articleIndex + 1]
+    );
     window.scrollTo(0, 0);
-  }, [articleId]);
+  }, [articleId, articleIndex]);
 
   if (!articleData) return <div>Hello Empty</div>;
 
@@ -46,6 +57,34 @@ const ArticlePage = (props) => {
           </div>
           <div className="ruby-blog__home-container__content-author-display">
             <AuthorInfo data={articleData} />
+          </div>
+          <div className="ruby-blog__home-container__content-post-links">
+            {articleIndex - 1 < 0 ? (
+              <PreviousNextPost
+                postType=""
+                articleImg={null}
+                articleTitle={null}
+              />
+            ) : (
+              <PreviousNextPost
+                postType="Previous post"
+                articleImg={articles[articleIndex - 1].img}
+                articleTitle={articles[articleIndex - 1].title}
+              />
+            )}
+            {articleIndex + 1 >= articles.length ? (
+              <PreviousNextPost
+                postType=""
+                articleImg={null}
+                articleTitle={null}
+              />
+            ) : (
+              <PreviousNextPost
+                postType="next post"
+                articleImg={articles[articleIndex + 1].img}
+                articleTitle={articles[articleIndex + 1].title}
+              />
+            )}
           </div>
         </div>
       </div>
