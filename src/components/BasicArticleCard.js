@@ -19,7 +19,7 @@ const BasicArticleCard = (props) => {
         </Link>
       </div>
       <div className="basic-article-card__container__content-div">
-        <Tag tag={article.tag} />
+        <Tag tag={article.tag[0]} />
         <div className="basic-article-card__container__content-div__title">
           <h2>
             <Link
@@ -50,7 +50,7 @@ const BasicArticleCard = (props) => {
           </div>
           <div className="basic-article-card__container__content-div__end-authors">
             <div className="basic-article-card__container__content-div__end-authors__circle">
-              <img src={article.author} alt={article.title + article.tag} />
+              <img src={article.author} alt={article.title + article.tag[0]} />
             </div>
           </div>
         </div>

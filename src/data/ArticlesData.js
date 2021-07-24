@@ -1,8 +1,20 @@
+import airPodsCool from "./md/airPodsCool.md";
+import doYouNeedAnAppleTV from "./md/doYouNeedAnAppleTV.md";
+import eraOfSmartWatches from "./md/eraOfSmartWatches.md";
+import iPadReplacement from "./md/iPadReplacement.md";
+import isChromebookStillaThing from "./md/isChromebookStillaThing.md";
+import mackbookReview from "./md/mackbookReview.md";
+import packingForTravel from "./md/packingForTravel.md";
+import reviewingHomeMini from "./md/reviewingHomeMini.md";
+import whatsOnMyiPhone from "./md/whatsOnMyiPhone.md";
+import whatisJS from "./md/whatIsJS.md";
+import surveyJS from "./md/surveyJS.md";
+
 const articles = [
   {
     type: "fancy",
     articleId: "article-1",
-    tag: "Apple",
+    tag: ["Apple", "technology"],
     title: "What's on MY iPhone?",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?phone",
@@ -11,11 +23,12 @@ const articles = [
     date: "4 May 2023",
     address: "sydney, australia",
     readTime: 5,
+    articleData: whatsOnMyiPhone,
   },
   {
     type: "basic",
     articleId: "article-2",
-    tag: "google",
+    tag: ["google", "technology", "computer science"],
     title: "Is Chromebook Still a Thing",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?nature",
@@ -24,11 +37,12 @@ const articles = [
     date: "14 June 2023",
     address: "mumbai, India",
     readTime: 7,
+    articleData: isChromebookStillaThing,
   },
   {
     type: "basic",
     articleId: "article-3",
-    tag: "Apple",
+    tag: ["Apple", "technology"],
     title: "Do You Need an Apple TV?",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?water",
@@ -37,11 +51,12 @@ const articles = [
     date: "25 September 2025",
     address: "Istanbul, Turkey",
     readTime: 2,
+    articleData: doYouNeedAnAppleTV,
   },
   {
     type: "basic",
     articleId: "article-4",
-    tag: "review",
+    tag: ["review", "apple", "technology", "thoughts"],
     title: "MacBook Air 2018 Review",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?google",
@@ -50,11 +65,12 @@ const articles = [
     date: "11 December 2025",
     address: "New York, united states ",
     readTime: 3,
+    articleData: mackbookReview,
   },
   {
     type: "basic",
     articleId: "article-5",
-    tag: "wearable",
+    tag: ["wearable", "fashion", "devices", "tips & tricks"],
     title: "The Era of Smartwatchs",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?house",
@@ -63,11 +79,12 @@ const articles = [
     date: "22 March 2022",
     address: "london, united kingdom ",
     readTime: 8,
+    articleData: eraOfSmartWatches,
   },
   {
     type: "fancy",
     articleId: "article-6",
-    tag: "apple",
+    tag: ["apple", "technology", "devices"],
     title: "iPad as a Notebook Replacement",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?fort",
@@ -76,11 +93,12 @@ const articles = [
     date: "2 January 2023",
     address: "Shanghai, China",
     readTime: 4,
+    articleData: iPadReplacement,
   },
   {
     type: "basic",
     articleId: "article-7",
-    tag: "apple",
+    tag: ["apple", "wearable", "review"],
     title: "AirPods are Cool",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?computer",
@@ -89,12 +107,13 @@ const articles = [
     date: "22 January 2022",
     address: "Vaadhoo, Maldives",
     readTime: 6,
+    articleData: airPodsCool,
   },
   {
     type: "fancy",
     articleId: "article-8",
-    tag: "Tips & Tricks",
-    title: "Packing for Tracel",
+    tag: ["Tips & Tricks", "life", "ideas"],
+    title: "Packing for Travel",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?colors",
     author: "https://source.unsplash.com/1600x900/?tree",
@@ -102,11 +121,12 @@ const articles = [
     date: "12 May 2024",
     address: "Colombo, Sri Lanka",
     readTime: 4,
+    articleData: packingForTravel,
   },
   {
     type: "basic",
     articleId: "article-9",
-    tag: "google",
+    tag: ["google", "technology", "review", "devices"],
     title: "Reviewing the Home Mini",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?animals",
@@ -115,7 +135,39 @@ const articles = [
     date: "1 April 2023",
     address: "Kushma, Nepal ",
     readTime: 3,
+    articleData: reviewingHomeMini,
+  },
+
+  {
+    type: "fancy",
+    articleId: "article-10",
+    tag: ["code", "technology", "javascript", "book"],
+    title: "What is JavaScript? : Getting Started",
+    desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
+    img: "https://raw.githubusercontent.com/getify/You-Dont-Know-JS/2nd-ed/get-started/images/cover.png",
+    author: "https://source.unsplash.com/1600x900/?code",
+    authorName: "Suzan Walker",
+    date: "11 May 2023",
+    address: "Kushma, Nepal ",
+    readTime: 5,
+    articleData: whatisJS,
+  },
+  {
+    type: "basic",
+    articleId: "article-11",
+    tag: ["code", "technology", "javascript"],
+    title: "Survey JavaScript",
+    desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
+    img: "https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS-970-80.jpg.webp",
+    author: "https://source.unsplash.com/1600x900/?books",
+    authorName: "Sarah Brown",
+    date: "11 June 2022",
+    address: "Kulu, India",
+    readTime: 11,
+    articleData: surveyJS,
   },
 ];
+
+console.log("Articles Data", articles);
 
 export default articles;
