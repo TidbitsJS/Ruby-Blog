@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import {
+  GrFacebookOption,
+  GrTwitter,
+  GrPinterest,
+  GrLinkedinOption,
+  GrReddit,
+  GrInstagram,
+} from "react-icons/gr";
 import Tag from "./Tag";
 
 import "./articleLayout.css";
@@ -36,6 +44,26 @@ const ArticleLayout = (props) => {
         {props.data.tag.map((tag, index) => (
           <div key={tag + index}>#{tag}</div>
         ))}
+      </div>
+      <div className="ruby-blog__article-layout__container__socialMedia">
+        <div className="ruby-blog__article-layout__container__socialMedia-facebook">
+          <GrFacebookOption />
+        </div>
+        <div className="ruby-blog__article-layout__container__socialMedia-twitter">
+          <GrTwitter />
+        </div>
+        <div className="ruby-blog__article-layout__container__socialMedia-pinterest">
+          <GrPinterest />
+        </div>
+        <div className="ruby-blog__article-layout__container__socialMedia-linkedin">
+          <GrLinkedinOption />
+        </div>
+        <div className="ruby-blog__article-layout__container__socialMedia-reddit">
+          <GrReddit />
+        </div>
+        <div className="ruby-blog__article-layout__container__socialMedia-instagram">
+          <GrInstagram />
+        </div>
       </div>
     </div>
   );

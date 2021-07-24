@@ -121,6 +121,7 @@ h6 {
 .ruby-blog__article-layout__container__hashtags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   padding: 0rem 2rem 2rem 2rem;
 }
@@ -132,6 +133,67 @@ h6 {
   font-family: var(--font-base);
   text-transform: capitalize;
   color: var(--dark-gray-color);
+}
+
+.ruby-blog__article-layout__container__socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ruby-blog__article-layout__container__socialMedia div {
+  margin-right: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-base);
+
+  margin-bottom: 1.5rem;
+  color: var(--white-color);
+  font-weight: 700;
+
+  transition: opacity 0.3s var(--animation-base);
+}
+
+.ruby-blog__article-layout__container__socialMedia-facebook {
+  background: #3b5998;
+}
+
+.ruby-blog__article-layout__container__socialMedia-twitter {
+  background: #1da1f2;
+}
+
+.ruby-blog__article-layout__container__socialMedia-pinterest {
+  background: #bd081c;
+}
+
+.ruby-blog__article-layout__container__socialMedia-linkedin {
+  background: #0077b5;
+}
+
+.ruby-blog__article-layout__container__socialMedia-reddit {
+  background: #ff4500;
+}
+
+.ruby-blog__article-layout__container__socialMedia-instagram {
+  background: #833ab4;
+}
+
+.ruby-blog__article-layout__container__socialMedia:hover div {
+  opacity: 0.2;
+}
+
+.ruby-blog__article-layout__container__socialMedia div:hover,
+.ruby-blog__article-layout__container__socialMedia div:hover ~ a {
+  opacity: 1;
 }
 
 @media screen and (max-width: 330px) {
