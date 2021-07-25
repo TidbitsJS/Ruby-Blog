@@ -137,7 +137,6 @@ const articles = [
     readTime: 3,
     articleData: reviewingHomeMini,
   },
-
   {
     type: "fancy",
     articleId: "article-10",

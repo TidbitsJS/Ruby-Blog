@@ -53,7 +53,9 @@ const Header = () => {
               <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__navlinks">
                 <nav>
                   <ul>
-                    <li>Home</li>
+                    <li>
+                      <Link to="/">Home</Link>
+                    </li>
                     <li>Tag</li>
                     <li>Author</li>
                   </ul>

@@ -10,12 +10,13 @@
   font-size: 16px;
   color: var(--dark-gray-color);
   font-weight: 600;
+  margin-bottom: 3px;
 }
 
 .recentPosts-post p {
   font-size: 11px;
   font-family: var(--font-base);
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: var(--secondary-text-color);
-  font-weight: 600;
+  font-weight: 700;
 }

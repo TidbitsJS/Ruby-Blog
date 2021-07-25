@@ -27,17 +27,17 @@ const ShortcutBar = () => {
           <RecentPost
             title="What's on My iPhone?"
             date="May 9, 2019"
-            link="/article"
+            link="article-1"
           />
           <RecentPost
             title="Is Chromebook Still a Thing?"
             date="May 9, 2019"
-            link="/article"
+            link="article-2"
           />
           <RecentPost
             title="Do You Need an Apple TV?"
             date="May 9, 2019"
-            link="/article"
+            link="article-3"
           />
         </div>
       </div>

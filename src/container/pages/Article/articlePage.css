@@ -80,6 +80,10 @@
   margin-top: 2rem;
 }
 
+.ruby-blog__home-container__content-post-links a {
+  display: contents;
+}
+
 .ruby-blog__container__anotherPost-thumbnail:first-child {
   margin-right: 1rem;
 }
@@ -97,6 +101,17 @@
 @media screen and (max-width: 700px) {
   .ruby-blog__home-container-articlePage {
     padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ruby-blog__home-container__content-post-links {
+    flex-direction: column;
+  }
+
+  .ruby-blog__container__anotherPost-thumbnail:first-child {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 

@@ -60,29 +60,21 @@ const ArticlePage = (props) => {
           </div>
           <div className="ruby-blog__home-container__content-post-links">
             {articleIndex - 1 < 0 ? (
-              <PreviousNextPost
-                postType=""
-                articleImg={null}
-                articleTitle={null}
-              />
+              <PreviousNextPost postType="" article={null} content="left" />
             ) : (
               <PreviousNextPost
                 postType="Previous post"
-                articleImg={articles[articleIndex - 1].img}
-                articleTitle={articles[articleIndex - 1].title}
+                article={articles[articleIndex - 1]}
+                content="left"
               />
             )}
             {articleIndex + 1 >= articles.length ? (
-              <PreviousNextPost
-                postType=""
-                articleImg={null}
-                articleTitle={null}
-              />
+              <PreviousNextPost postType="" article={null} content="right" />
             ) : (
               <PreviousNextPost
                 postType="next post"
-                articleImg={articles[articleIndex + 1].img}
-                articleTitle={articles[articleIndex + 1].title}
+                article={articles[articleIndex + 1]}
+                content="right"
               />
             )}
           </div>

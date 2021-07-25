@@ -40,6 +40,7 @@
   margin: 1rem 0;
 }
 
-.ruby-blog__shortcutBar-container__recentPostsBar-content .recentPosts-post {
-  margin: 1.25rem 0;
+.ruby-blog__shortcutBar-container__recentPostsBar-content {
+  margin-bottom: 1.25rem;
+  padding-left: 1.2rem;
 }

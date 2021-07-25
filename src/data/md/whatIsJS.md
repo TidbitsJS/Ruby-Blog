@@ -44,10 +44,6 @@ Further distancing the language from the Oracle-owned trademark, the official na
 
 In other words, the JavaScript/JS that runs in your browser or in Node.js, is _an_ implementation of the ES2019 standard.
 
-| NOTE:                                                                                                                                                                          |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Don't use terms like "JS6" or "ES8" to refer to the language. Some do, but those terms only serve to perpetuate confusion. "ES20xx" or just "JS" are what you should stick to. |
-
 Whether you call it JavaScript, JS, ECMAScript, or ES2019, it's most definitely not a variant of the Java language!
 
 > "Java is to JavaScript as ham is to hamster." --Jeremy Keith, 2009
@@ -59,8 +55,6 @@ I mentioned TC39, the technical steering committee that manages JS. Their primar
 JS's syntax and behavior are defined in the ES specification.
 
 ES2019 happens to be the 10th major numbered specification/revision since JS's inception in 1995, so in the specification's official URL as hosted by ECMA, you'll find "10.0":
-
-https://www.ecma-international.org/ecma-262/10.0/
 
 The TC39 committee is comprised of between 50 and about 100 different people from a broad section of web-invested companies, such as browser makers (Mozilla, Google, Apple) and device makers (Samsung, etc). All members of the committee are volunteers, though many of them are employees of these companies and so may receive compensation in part for their duties on the committee.
 
@@ -107,10 +101,6 @@ Appendix B _gotchas_ aren't encountered very often, but it's still a good idea t
 ### Not All (Web) JS...
 
 Is this code a JS program?
-
-```js
-alert("Hello, JS!");
-```
 
 Depends on how you look at things. The `alert(..)` function shown here is not included in the JS specification, but it _is_ in all web JS environments. Yet, you won't find it in Appendix B, so what gives?
 
@@ -218,34 +208,11 @@ For new and incompatible syntax, the solution is transpiling. Transpiling is a c
 
 For example, a developer may write a snippet of code like:
 
-```js
-if (something) {
-  let x = 3;
-  console.log(x);
-} else {
-  let x = 4;
-  console.log(x);
-}
-```
-
 This is how the code would look in the source code tree for that application. But when producing the file(s) to deploy to the public website, the Babel transpiler might convert that code to look like this:
-
-```js
-var x$0, x$1;
-if (something) {
-  x$0 = 3;
-  console.log(x$0);
-} else {
-  x$1 = 4;
-  console.log(x$1);
-}
-```
 
 The original snippet relied on `let` to create block-scoped `x` variables in both the `if` and `else` clauses which did not interfere with each other. An equivalent program (with minimal re-working) that Babel can produce just chooses to name two different variables with unique names, producing the same non-interference outcome.
 
-| NOTE:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| The `let` keyword was added in ES6 (in 2015). The preceding example of transpiling would only need to apply if an application needed to run in a pre-ES6 supporting JS environment. The example here is just for simplicity of illustration. When ES6 was new, the need for such a transpilation was quite prevalent, but in 2020 it's much less common to need to support pre-ES6 environments. The "target" used for transpiliation is thus a sliding window that shifts upward only as decisions are made for a site/application to stop supporting some old browser/engine. |
+The `let` keyword was added in ES6 (in 2015). The preceding example of transpiling would only need to apply if an application needed to run in a pre-ES6 supporting JS environment. The example here is just for simplicity of illustration. When ES6 was new, the need for such a transpilation was quite prevalent, but in 2020 it's much less common to need to support pre-ES6 environments. The "target" used for transpiliation is thus a sliding window that shifts upward only as decisions are made for a site/application to stop supporting some old browser/engine.
 
 You may wonder: why go to the trouble of using a tool to convert from a newer syntax version to an older one? Couldn't we just write the two variables and skip using the `let` keyword? The reason is, it's strongly recommended that developers use the latest version of JS so that their code is clean and communicates its ideas most effectively.
 
@@ -255,46 +222,6 @@ Developers should focus on writing the clean, new syntax forms, and let the tool
 
 If the forwards-compatibility issue is not related to new syntax, but rather to a missing API method that was only recently added, the most common solution is to provide a definition for that missing API method that stands in and acts as if the older environment had already had it natively defined. This pattern is called a polyfill (aka "shim").
 
-Consider this code:
-
-```js
-// getSomeRecords() returns us a promise for some
-// data it will fetch
-var pr = getSomeRecords();
-
-// show the UI spinner while we get the data
-startSpinner();
-
-pr.then(renderRecords) // render if successful
-  .catch(showError) // show an error if not
-  .finally(hideSpinner); // always hide the spinner
-```
-
-This code uses an ES2019 feature, the `finally(..)` method on the promise prototype. If this code were used in a pre-ES2019 environment, the `finally(..)` method would not exist, and an error would occur.
-
-A polyfill for `finally(..)` in pre-ES2019 environments could look like this:
-
-```js
-if (!Promise.prototype.finally) {
-  Promise.prototype.finally = function f(fn) {
-    return this.then(
-      function t(v) {
-        return Promise.resolve(fn()).then(function t() {
-          return v;
-        });
-      },
-      function c(e) {
-        return Promise.resolve(fn()).then(function t() {
-          throw e;
-        });
-      }
-    );
-  };
-}
-```
-
-| WARNING:                                                                                                                                                                                                                                                      |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | This is only a simple illustration of a basic (not entirely spec-compliant) polyfill for `finally(..)`. Don't use this polyfill in your code; always use a robust, official polyfill wherever possible, such as the collection of polyfills/shims in ES-Shim. |
 
 The `if` statement protects the polyfill definition by preventing it from running in any environment where the JS engine has already defined that method. In older environments, the polyfill is defined, but in newer environments the `if` statement is quietly skipped.
@@ -317,21 +244,9 @@ These misinformed claims and criticisms should be set aside. The real reason it 
 
 Historically, scripted or interpreted languages were executed in generally a top-down and line-by-line fashion; there's typically not an initial pass through the program to process it before execution begins (see Figure 1).
 
-<figure>
-    <img src="images/fig1.png" width="650" alt="Interpreting a script to execute it" align="center">
-    <figcaption><em>Fig. 1: Interpreted/Scripted Execution</em></figcaption>
-    <br><br>
-</figure>
-
 In scripted or interpreted languages, an error on line 5 of a program won't be discovered until lines 1 through 4 have already executed. Notably, the error on line 5 might be due to a runtime condition, such as some variable or value having an unsuitable value for an operation, or it may be due to a malformed statement/command on that line. Depending on context, deferring error handling to the line the error occurs on may be a desirable or undesirable effect.
 
 Compare that to languages which do go through a processing step (typically, called parsing) before any execution occurs, as illustrated in Figure 2:
-
-<figure>
-    <img src="images/fig2.png" width="650" alt="Parsing, compiling, and executing a program" align="center">
-    <figcaption><em>Fig. 2: Parsing + Compilation + Execution</em></figcaption>
-    <br><br>
-</figure>
 
 In this processing model, an invalid command (such as broken syntax) on line 5 would be caught during the parsing phase, before any execution has begun, and none of the program would run. For catching syntax (or otherwise "static") errors, generally it's preferred to know about them ahead of any doomed partial execution.
 
@@ -364,12 +279,6 @@ So what do these nitty-gritty details boil down to? Step back and consider the e
 4. Finally, the JS VM executes the program.
 
 To visualize those steps, again:
-
-<figure>
-    <img src="images/fig3.png" width="650" alt="Steps of JS compilation and execution" align="center">
-    <figcaption><em>Fig. 3: Parsing, Compiling, and Executing JS</em></figcaption>
-    <br><br>
-</figure>
 
 Is JS handled more like an interpreted, line-by-line script, as in Figure 1, or is it handled more like a compiled language that's processed in one-to-several passes first, before execution (as in Figures 2 and 3)?
 
@@ -419,28 +328,6 @@ Rather than fighting and arguing with strict mode, like a kid who just wants to 
 
 Strict mode is switched on per file with a special pragma (nothing allowed before it except comments/whitespace):
 
-```js
-// only whitespace and comments are allowed
-// before the use-strict pragma
-"use strict";
-// the rest of the file runs in strict mode
-```
-
-| WARNING:                                                                                                                                                                                                                                                                                             |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Something to be aware of is that even a stray `;` all by itself appearing before the strict mode pragma will render the pragma useless; no errors are thrown because it's valid JS to have a string literal expression in a statement position, but it also will silently _not_ turn on strict mode! |
-
-Strict mode can alternatively be turned on per-function scope, with exactly the same rules about its surroundings:
-
-```js
-function someOperations() {
-  // whitespace and comments are fine here
-  "use strict";
-
-  // all this code will run in strict mode
-}
-```
-
 Interestingly, if a file has strict mode turned on, the function-level strict mode pragmas are disallowed. So you have to pick one or the other.
 
 The **only** valid reason to use a per-function approach to strict mode is when you are converting an existing non-strict mode program file and need to make the changes little by little over time. Otherwise, it's vastly better to simply turn strict mode on for the entire file/program.
@@ -464,7 +351,3 @@ JS is a multi-paradigm language, meaning the syntax and capabilities allow a dev
 JS is a compiled language, meaning the tools (including the JS engine) process and verify a program (reporting any errors!) before it executes.
 
 With our language now _defined_, let's start getting to know its ins and outs.
-
-[^specapb]:
-    ECMAScript 2019 Language Specification, Appendix B: Additional ECMAScript Features for Web Browsers, https://www.ecma-international.org/ecma-262/10.0/#sec-additional-ecmascript-features-for-web-browsers (latest as of time of this writing in January 2020)
-    {"mode":"full","isActive":false}
