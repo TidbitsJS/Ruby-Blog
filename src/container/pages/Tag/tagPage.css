@@ -4,8 +4,20 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
 
   margin-bottom: 1rem;
+  max-width: 250px;
+  position: relative;
+  left: 0%;
+}
+
+.ruby-blog__home-container__content-tags-display-div::-webkit-scrollbar {
+  display: none;
 }
 
 .ruby-blog__home-container__content-tags-display-div__tag {
@@ -17,6 +29,8 @@
   font-size: 14px;
   cursor: pointer;
 
+  white-space: nowrap;
+
   transition: all 0.3s var(--animation-base);
 }
 
@@ -25,4 +39,17 @@
   color: var(--white-color);
   padding: 5px 15px 7px;
   border-radius: 15px;
+}
+
+@media screen and (min-width: 600px) {
+  .ruby-blog__home-container__content-tags-display-div {
+    max-width: 580px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .ruby-blog__home-container__content-tags-display-div {
+    max-width: 200px;
+    margin: 0 0.7rem;
+  }
 }

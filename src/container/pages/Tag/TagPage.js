@@ -43,6 +43,7 @@ function TagPage() {
             }
           })}
         </div>
+
         <div className="ruby-blog__home-container__content-article-div">
           {articles.map((article, index) => {
             if (article.tag.includes(activeTag)) {
