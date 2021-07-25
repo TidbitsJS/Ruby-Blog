@@ -1,0 +1,28 @@
+.ruby-blog__home-container__content-tags-display-div {
+  margin: 0rem 2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.ruby-blog__home-container__content-tags-display-div__tag {
+  margin-right: 1.3rem;
+  font-family: var(--font-base);
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  text-transform: capitalize;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.3s var(--animation-base);
+}
+
+.ruby-blog__home-container__content-tags-display-div__tag.active {
+  background: var(--black-color);
+  color: var(--white-color);
+  padding: 5px 15px 7px;
+  border-radius: 15px;
+}
