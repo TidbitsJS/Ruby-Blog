@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
+import Tag from "./Tag";
 
 import "./basicArticleCard.css";
-import Tag from "./Tag";
 
 const BasicArticleCard = (props) => {
   let article = props.data;
@@ -14,6 +15,7 @@ const BasicArticleCard = (props) => {
             pathname: `/${article.articleId}`,
             state: article.articleId,
           }}
+          onClick={() => scroll.scrollToTop()}
         >
           <img src={article.img} alt={article.title} />
         </Link>
@@ -27,6 +29,7 @@ const BasicArticleCard = (props) => {
                 pathname: `/${article.articleId}`,
                 state: article.articleId,
               }}
+              onClick={() => scroll.scrollToTop()}
             >
               {article.title}
             </Link>
@@ -43,6 +46,7 @@ const BasicArticleCard = (props) => {
                   pathname: `/${article.articleId}`,
                   state: article.articleId,
                 }}
+                onClick={() => scroll.scrollToTop()}
               >
                 Read More
               </Link>

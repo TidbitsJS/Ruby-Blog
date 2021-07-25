@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
+
 import "./recentPost.css";
 
 const RecentPost = (props) => {
@@ -10,6 +12,7 @@ const RecentPost = (props) => {
           pathname: `/${props.link}`,
           articleId: props.link,
         }}
+        onClick={() => scroll.scrollToTop()}
       >
         <h5>{props.title}</h5>
       </Link>

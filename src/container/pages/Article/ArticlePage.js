@@ -45,7 +45,7 @@ const ArticlePage = (props) => {
           </div>
           {articles.slice(0, 3).map((article, index) => {
             if (article.type === "fancy") {
-              return <FancyArticleCard data={article} key={index} />;
+              return <FancyArticleCard data={article} key={index * 5} />;
             } else {
               return <BasicArticleCard data={article} key={index * 2} />;
             }

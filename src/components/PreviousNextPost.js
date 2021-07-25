@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 import "./previousNextPost.css";
 
@@ -11,6 +12,7 @@ const PreviousNextPost = (props) => {
           pathname: `/${props.article.articleId}`,
           state: props.article.articleId,
         }}
+        onClick={() => scroll.scrollToTop()}
       >
         <div
           className="ruby-blog__container__anotherPost-thumbnail"
