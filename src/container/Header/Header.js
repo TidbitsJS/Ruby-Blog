@@ -30,7 +30,9 @@ const Header = () => {
             <li>
               <Link to="/tag">Tag</Link>
             </li>
-            <li>Author</li>
+            <li>
+              <Link to="/authors">Authors</Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -61,7 +63,9 @@ const Header = () => {
                     <li>
                       <Link to="/tag">Tag</Link>
                     </li>
-                    <li>Author</li>
+                    <li>
+                      <Link to="/authors">Authors</Link>
+                    </li>
                   </ul>
                 </nav>
               </div>

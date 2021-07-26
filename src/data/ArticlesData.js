@@ -61,7 +61,7 @@ const articles = [
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?google",
     author: "https://source.unsplash.com/1600x900/?usa",
-    authorName: "Arthur Conon Doel",
+    authorName: "arthur conan doyle",
     date: "11 December 2025",
     address: "New York, united states ",
     readTime: 3,
@@ -88,7 +88,7 @@ const articles = [
     title: "iPad as a Notebook Replacement",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?fort",
-    author: "https://source.unsplash.com/1600x900/?teacher",
+    author: "https://source.unsplash.com/1600x900/?people",
     authorName: "Jose Walker",
     date: "2 January 2023",
     address: "Shanghai, China",
@@ -103,7 +103,7 @@ const articles = [
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?computer",
     author: "https://source.unsplash.com/1600x900/?food",
-    authorName: "Maria ROdriguez",
+    authorName: "Maria Rodriguez",
     date: "22 January 2022",
     address: "Vaadhoo, Maldives",
     readTime: 6,
@@ -130,7 +130,7 @@ const articles = [
     title: "Reviewing the Home Mini",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://source.unsplash.com/1600x900/?animals",
-    author: "https://source.unsplash.com/1600x900/?animals",
+    author: "https://source.unsplash.com/1600x900/?india",
     authorName: "Suzan Walker",
     date: "1 April 2023",
     address: "Kushma, Nepal ",
@@ -144,7 +144,7 @@ const articles = [
     title: "What is JavaScript? : Getting Started",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://raw.githubusercontent.com/getify/You-Dont-Know-JS/2nd-ed/get-started/images/cover.png",
-    author: "https://source.unsplash.com/1600x900/?code",
+    author: "https://source.unsplash.com/1600x900/?india",
     authorName: "Suzan Walker",
     date: "11 May 2023",
     address: "Kushma, Nepal ",
@@ -158,7 +158,7 @@ const articles = [
     title: "Survey JavaScript",
     desc: "Nunc fringilla turpis tincidunt purus malesuada, vel faucibus mauris finibus.",
     img: "https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS-970-80.jpg.webp",
-    author: "https://source.unsplash.com/1600x900/?books",
+    author: "https://source.unsplash.com/1600x900/?tree",
     authorName: "Sarah Brown",
     date: "11 June 2022",
     address: "Kulu, India",
@@ -166,7 +166,5 @@ const articles = [
     articleData: surveyJS,
   },
 ];
-
-console.log("Articles Data", articles);
 
 export default articles;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { TiLocation } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 import "./authorInfo.css";
 
@@ -16,7 +17,17 @@ const AuthorInfo = (props) => {
   return (
     <div className="ruby-blog__author-info__container">
       <div className="ruby-blog__author-info__container__author-img-div">
-        <img src={props.data.author} alt="author_img" />
+        <Link
+          to={{
+            pathname: "/authors",
+            state: {
+              authorImg: props.data.author,
+              authorName: props.data.authorName,
+            },
+          }}
+        >
+          <img src={props.data.author} alt="author_img" />
+        </Link>
       </div>
       <div className="ruby-blog__author-info__container__content">
         <div className="ruby-blog__author-info__container__content__author-title">

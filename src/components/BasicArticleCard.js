@@ -54,7 +54,20 @@ const BasicArticleCard = (props) => {
           </div>
           <div className="basic-article-card__container__content-div__end-authors">
             <div className="basic-article-card__container__content-div__end-authors__circle">
-              <img src={article.author} alt={article.title + article.tag[0]} />
+              <Link
+                to={{
+                  pathname: `/authors`,
+                  state: {
+                    authorImg: article.author,
+                    authorName: article.authorName,
+                  },
+                }}
+              >
+                <img
+                  src={article.author}
+                  alt={article.title + article.tag[0]}
+                />
+              </Link>
             </div>
           </div>
         </div>

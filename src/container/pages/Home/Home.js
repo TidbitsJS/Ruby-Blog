@@ -19,9 +19,19 @@ const Home = () => {
         <div className="ruby-blog__home-container__content-article-div">
           {articles.map((article, index) => {
             if (article.type === "fancy") {
-              return <FancyArticleCard data={article} />;
+              return (
+                <FancyArticleCard
+                  data={article}
+                  key={article.type + index * 2 + article.authorName}
+                />
+              );
             } else {
-              return <BasicArticleCard data={article} />;
+              return (
+                <BasicArticleCard
+                  data={article}
+                  key={article.type + index * 4 + article.authorName}
+                />
+              );
             }
           })}
         </div>

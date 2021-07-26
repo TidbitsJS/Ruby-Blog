@@ -21,6 +21,7 @@
   height: 70px;
 
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .ruby-blog__author-info__container__content {
