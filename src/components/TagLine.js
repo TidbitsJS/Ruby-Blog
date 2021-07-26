@@ -1,15 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./tagLine.css";
 
 const TagLine = (props) => {
   return (
-    <div className="taglist-tag">
-      <p>{props.title}</p>
-      <div className="taglist-tagCount">
-        <div>{props.count}</div>
+    <Link
+      to={{
+        pathname: "/tag",
+        state: props.title,
+      }}
+    >
+      <div className="taglist-tag">
+        <p>{props.title}</p>
+        <div className="taglist-tagCount">
+          <div>{props.count}</div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

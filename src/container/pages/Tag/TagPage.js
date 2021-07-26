@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import FancyArticleCard from "../../../components/FancyArticleCard";
 import BasicArticleCard from "../../../components/BasicArticleCard";
-import PrimaryButton from "../../../components/PrimaryButton";
 import ShortcutBar from "../../../components/ShortcutBar";
 import articles from "../../../data/ArticlesData";
 
 import "./tagPage.css";
 
-function TagPage() {
+function TagPage(props) {
   const [activeTag, setActiveTag] = useState("apple");
+  const scrollPos = useRef();
+
+  const tag = useLocation();
 
   let allTags = [
     "apple",
@@ -22,11 +25,27 @@ function TagPage() {
     "technology",
   ];
 
+  useEffect(() => {
+    if (tag.state) {
+      setActiveTag(tag.state.toLowerCase());
+    }
+  }, [tag.state]);
+
+  const scrollLeft = () => {
+    scrollPos.current.scrollLeft = 0;
+  };
+
   return (
     <div className="ruby-blog__home-container">
       <div className="ruby-blog__home-container__content">
-        <div className="ruby-blog__home-container__content-tags-display-div">
-          <div className="ruby-blog__home-container__content-tags-display-div__tag active">
+        <div
+          ref={scrollPos}
+          className="ruby-blog__home-container__content-tags-display-div"
+        >
+          <div
+            className="ruby-blog__home-container__content-tags-display-div__tag active"
+            onClick={() => scrollLeft()}
+          >
             {activeTag}
           </div>
           {allTags.map((tag, index) => {
@@ -34,7 +53,10 @@ function TagPage() {
               return (
                 <div
                   className="ruby-blog__home-container__content-tags-display-div__tag"
-                  onClick={() => setActiveTag(tag)}
+                  onClick={() => {
+                    scrollLeft();
+                    setActiveTag(tag);
+                  }}
                   key={index + tag + 2}
                 >
                   {tag}

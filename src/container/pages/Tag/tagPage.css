@@ -8,6 +8,7 @@
   overflow-x: scroll;
 
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
   user-select: none;
 
   margin-bottom: 1rem;
