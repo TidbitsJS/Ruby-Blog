@@ -9,7 +9,7 @@ const PreviousNextPost = (props) => {
     return (
       <Link
         to={{
-          pathname: `/${props.article.articleId}`,
+          pathname: `/articles/${props.article.articleId}`,
           state: props.article.articleId,
         }}
         onClick={() => scroll.scrollToTop()}

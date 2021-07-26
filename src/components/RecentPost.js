@@ -9,7 +9,7 @@ const RecentPost = (props) => {
     <div className="recentPosts-post">
       <Link
         to={{
-          pathname: `/${props.link}`,
+          pathname: `/articles/${props.link}`,
           articleId: props.link,
         }}
         onClick={() => scroll.scrollToTop()}

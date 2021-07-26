@@ -19,7 +19,7 @@ const FancyArticleCard = (props) => {
           <h2>
             <Link
               to={{
-                pathname: `/${article.articleId}`,
+                pathname: `/articles/${article.articleId}`,
                 state: article.articleId,
               }}
               onClick={() => scroll.scrollToTop()}
@@ -33,7 +33,7 @@ const FancyArticleCard = (props) => {
             <p>
               <Link
                 to={{
-                  pathname: `/${article.articleId}`,
+                  pathname: `/articles/${article.articleId}`,
                   state: article.articleId,
                 }}
                 onClick={() => scroll.scrollToTop()}
