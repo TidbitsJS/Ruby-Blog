@@ -12,7 +12,12 @@ const RecentPost = (props) => {
           pathname: `/articles/${props.link}`,
           articleId: props.link,
         }}
-        onClick={() => scroll.scrollToTop()}
+        onClick={() => {
+          scroll.scrollToTop();
+          if (props.clickEvent) {
+            props.clickEvent(false);
+          }
+        }}
       >
         <h5>{props.title}</h5>
       </Link>

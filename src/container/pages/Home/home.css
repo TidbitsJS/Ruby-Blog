@@ -20,7 +20,6 @@
 .ruby-blog__home-container__content-article-div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .ruby-blog__home-container__content-spinner-div {
@@ -54,6 +53,12 @@
 
   .ruby-blog__home-container__content-article-div {
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .ruby-blog__home-container {
+    padding: 1rem;
   }
 }
 

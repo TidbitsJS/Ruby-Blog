@@ -58,13 +58,22 @@ const Header = () => {
                 <nav>
                   <ul>
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/" onClick={() => handleShowNavbar(false)}>
+                        Home
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/tag">Tag</Link>
+                      <Link to="/tag" onClick={() => handleShowNavbar(false)}>
+                        Tag
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/authors">Authors</Link>
+                      <Link
+                        to="/authors"
+                        onClick={() => handleShowNavbar(false)}
+                      >
+                        Authors
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -75,11 +84,31 @@ const Header = () => {
                   Tags
                 </p>
                 <div className="ruby-blog__header-container__nav-smallDevice__sidebar-content__tagslist">
-                  <TagLine title="Apple" count={8} />
-                  <TagLine title="Google" count={7} />
-                  <TagLine title="Review" count={3} />
-                  <TagLine title="Tips & Tricks" count={5} />
-                  <TagLine title="Wearable" count={4} />
+                  <TagLine
+                    title="Apple"
+                    count={8}
+                    clickEvent={handleShowNavbar}
+                  />
+                  <TagLine
+                    title="Google"
+                    count={7}
+                    clickEvent={handleShowNavbar}
+                  />
+                  <TagLine
+                    title="Review"
+                    count={3}
+                    clickEvent={handleShowNavbar}
+                  />
+                  <TagLine
+                    title="Tips & Tricks"
+                    count={5}
+                    clickEvent={handleShowNavbar}
+                  />
+                  <TagLine
+                    title="Wearable"
+                    count={4}
+                    clickEvent={handleShowNavbar}
+                  />
                 </div>
               </div>
 
@@ -92,16 +121,19 @@ const Header = () => {
                     title="What's on My iPhone?"
                     date="May 9, 2019"
                     link="article-1"
+                    clickEvent={handleShowNavbar}
                   />
                   <RecentPost
                     title="Is Chromebook Still a Thing?"
                     date="May 9, 2019"
                     link="article-2"
+                    clickEvent={handleShowNavbar}
                   />
                   <RecentPost
                     title="Do You Need an Apple TV?"
                     date="May 9, 2019"
                     link="article-3"
+                    clickEvent={handleShowNavbar}
                   />
                 </div>
               </div>

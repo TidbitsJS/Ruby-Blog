@@ -34,7 +34,15 @@ const ArticlePage = (props) => {
     window.scrollTo(0, 0);
   }, [articleId, articleIndex]);
 
-  if (!articleData) return <div>Hello Empty</div>;
+  if (!articleData)
+    return (
+      <div className="ruby-blog__home-container__content-spinner-div">
+        <div className="lds-ripple">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    );
 
   return (
     <div className="ruby-blog__home-container-articlePage">

@@ -10,6 +10,11 @@ const TagLine = (props) => {
         pathname: "/tag",
         state: props.title,
       }}
+      onClick={() => {
+        if (props.clickEvent) {
+          props.clickEvent(false);
+        }
+      }}
     >
       <div className="taglist-tag">
         <p>{props.title}</p>
