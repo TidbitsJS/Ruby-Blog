@@ -9,6 +9,7 @@ import {
   GrInstagram,
 } from "react-icons/gr";
 import Tag from "./Tag";
+import gfm from "remark-gfm";
 
 import "./articleLayout.css";
 
@@ -38,7 +39,7 @@ const ArticleLayout = (props) => {
         <img src={props.data.img} alt="article__layout__img" />
       </div>
       <div className="ruby-blog__article-layout__container__content">
-        <ReactMarkdown children={mdText} />
+        <ReactMarkdown remarkPlugins={[gfm]} children={mdText} />
       </div>
       <div className="ruby-blog__article-layout__container__hashtags">
         {props.data.tag.map((tag, index) => (

@@ -31,9 +31,19 @@ const AuthorInfo = (props) => {
       </div>
       <div className="ruby-blog__author-info__container__content">
         <div className="ruby-blog__author-info__container__content__author-title">
-          <h4 className="ruby-blog__author-info__container__content__author-titleh4">
-            {props.data.authorName}
-          </h4>
+          <Link
+            to={{
+              pathname: "/authors",
+              state: {
+                authorImg: props.data.author,
+                authorName: props.data.authorName,
+              },
+            }}
+          >
+            <h4 className="ruby-blog__author-info__container__content__author-titleh4">
+              {props.data.authorName}
+            </h4>
+          </Link>
 
           <div className="ruby-blog__author-info__container__content__author-social">
             {!showSocial ? (

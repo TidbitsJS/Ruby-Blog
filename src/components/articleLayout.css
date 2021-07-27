@@ -92,6 +92,7 @@ h6 {
 
 .ruby-blog__article-layout__container__content ul {
   padding: 0.5rem;
+  width: 100%;
 }
 
 .ruby-blog__article-layout__container__content li {
@@ -99,6 +100,7 @@ h6 {
   font-family: var(--font-base);
   line-height: 1.8;
   font-size: 15px;
+  width: 100%;
 }
 
 .ruby-blog__article-layout__container__content code {
@@ -128,6 +130,10 @@ h6 {
 .ruby-blog__article-layout__container__content p a img {
   width: unset;
   height: unset;
+}
+
+.ruby-blog__article-layout__container__content hr {
+  width: 100%;
 }
 
 .ruby-blog__article-layout__container__hashtags {
