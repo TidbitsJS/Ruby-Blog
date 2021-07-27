@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import TagPage from "./container/pages/Tag/TagPage";
 import Footer from "./container/Footer/Footer";
 import AuthorPage from "./container/pages/Author/AuthorPage";
+import NotFound from "./container/NotFound/NotFound";
 
 import "./App.css";
 
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/articles/:articleId" exact>
             <ArticlePage />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
         <Footer />
