@@ -1,0 +1,197 @@
+.ruby-blog__about-site__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #f9f9f9;
+  padding: 1rem 5rem;
+}
+
+.ruby-blog__about-site__container__short-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white-color);
+  transition: 0.3s box-shadow var(--animation-base);
+
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.ruby-blog__about-site__container__short-info:hover {
+  box-shadow: var(--shadow-base);
+}
+
+.ruby-blog__about-site__container__short-info__head-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ruby-blog__about-site__container__short-info__head-div h2 {
+  font-size: 35px;
+  font-family: var(--font-base);
+  font-weight: 700;
+}
+
+.ruby-blog__about-site__container__short-info__head-div p {
+  font-size: 15px;
+  font-family: var(--font-alt);
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ruby-blog__about-site__container__short-info__para-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.ruby-blog__about-site__container__short-info__para-div p {
+  margin: 0.3rem 0;
+  font-size: 17px;
+  font-family: var(--font-alt);
+  color: var(--dark-gray-color);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.ruby-blog__about-site__container__credits {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--white-color);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: 0.3s box-shadow var(--animation-base);
+
+  margin: 2rem 0rem 1rem;
+}
+
+.ruby-blog__about-site__container__credits:hover {
+  box-shadow: var(--shadow-base);
+}
+
+.ruby-blog__about-site__container__credits__programmer-div,
+.ruby-blog__about-site__container__credits__designer-div {
+  width: 500px;
+  background: #f9f9f9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  margin: 0.5rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div,
+.ruby-blog__about-site__container__credits__designer-div__profile-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-base);
+}
+
+.ruby-blog__about-site__container__credits__designer-div__profile-div img {
+  width: 100px;
+  height: 100px;
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div__headinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div__headinfo
+  h2 {
+  font-size: 28px;
+  font-family: var(--font-base);
+  font-weight: 700;
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div__headinfo
+  p {
+  font-family: var(--font-alt);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+}
+
+.ruby-blog__about-site__container__credits__programmer-div__profile-div__parainfo {
+  padding: 0rem 1rem;
+  font-family: var(--font-alt);
+  color: var(--dark-gray-color);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 750px) {
+  .ruby-blog__about-site__container {
+    padding: 1rem 2rem;
+  }
+
+  .ruby-blog__about-site__container__credits__programmer-div,
+  .ruby-blog__about-site__container__credits__designer-div {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ruby-blog__about-site__container {
+    padding: 1rem;
+  }
+
+  .ruby-blog__about-site__container__credits__programmer-div,
+  .ruby-blog__about-site__container__credits__designer-div {
+    padding: 2rem 0rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .ruby-blog__about-site__container {
+    padding: 1rem 0.5rem;
+  }
+
+  .ruby-blog__about-site__container__credits__programmer-div,
+  .ruby-blog__about-site__container__credits__designer-div {
+    padding: 2rem 0rem;
+  }
+
+  .ruby-blog__about-site__container__short-info {
+    padding: 1rem 0.7rem;
+  }
+
+  .ruby-blog__about-site__container__credits {
+    padding: 1rem 0.5rem;
+  }
+}

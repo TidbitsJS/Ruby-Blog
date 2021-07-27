@@ -7,6 +7,7 @@ import TagPage from "./container/pages/Tag/TagPage";
 import Footer from "./container/Footer/Footer";
 import AuthorPage from "./container/pages/Author/AuthorPage";
 import NotFound from "./container/NotFound/NotFound";
+import AboutSite from "./container/pages/About/AboutSite";
 
 import "./App.css";
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/authors" exact>
             <AuthorPage />
+          </Route>
+          <Route path="/about" exact>
+            <AboutSite />
           </Route>
           <Route path="/articles/:articleId" exact>
             <ArticlePage />

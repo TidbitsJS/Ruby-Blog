@@ -33,6 +33,9 @@ const Header = () => {
             <li>
               <Link to="/authors">Authors</Link>
             </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -73,6 +76,11 @@ const Header = () => {
                         onClick={() => handleShowNavbar(false)}
                       >
                         Authors
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/about" onClick={() => handleShowNavbar(false)}>
+                        About
                       </Link>
                     </li>
                   </ul>
