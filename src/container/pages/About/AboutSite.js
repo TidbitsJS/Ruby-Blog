@@ -1,4 +1,8 @@
 import React from "react";
+import { DiGithubAlt, DiRuby } from "react-icons/di";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { GiFrozenRing } from "react-icons/gi";
+import meImg from "../../../assets/me.svg";
 import ghostImg from "../../../assets/ghost.svg";
 
 import "./aboutSite.css";
@@ -25,7 +29,7 @@ const AboutSite = () => {
           </p>
           <p>
             Coming to the coding, the first, ( & proud feel ) thing is-site is
-            build using pure CSS. No extra things for CSS layout are used. Of
+            built using pure CSS. No extra things for CSS layout are used. Of
             course, it's REACT. The hype & my Weapon till now. Few npm packages
             are in use, including, react-markdown for rendering markdown files.
             A good thing is, I managed to do this site in less mess. Reusable
@@ -43,10 +47,7 @@ const AboutSite = () => {
       <div className="ruby-blog__about-site__container__credits">
         <div className="ruby-blog__about-site__container__credits__programmer-div">
           <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div">
-            <img
-              src="https://source.unsplash.com/1600x900/?code"
-              alt="programmer_img"
-            />
+            <img src={meImg} alt="programmer_img" />
           </div>
           <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__headinfo">
             <h2>It's ME</h2>
@@ -54,10 +55,30 @@ const AboutSite = () => {
           </div>
           <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__parainfo">
             <p>
-              Just another complex human being with complex thought system.
-              Currently exploring Web Development area with MERN as guide. I try
-              to code everyday. In spare time, I think.
+              Just another complex human being with a complex thought system.
+              Currently exploring the Web Development area with MERN as a guide.
+              In my spare time, I think ( or Overthink ).
             </p>
+          </div>
+          <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social">
+            <a
+              href="https://github.com/TidbitsJS"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social-github">
+                <DiGithubAlt />
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/tidbits.js/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social-instagram">
+                <AiOutlineInstagram />
+              </div>
+            </a>
           </div>
         </div>
         <div className="ruby-blog__about-site__container__credits__designer-div">
@@ -74,6 +95,19 @@ const AboutSite = () => {
               JavaScript and designed to simplify the process of online
               publishing for individual bloggers as well as online publications.
             </p>
+          </div>
+          <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social">
+            <a href="https://ghost.org/" target="_blank" rel="noreferrer">
+              <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social-ghost">
+                <GiFrozenRing />
+              </div>
+            </a>
+
+            <a href="https://ruby.ghost.io/" target="_blank" rel="noreferrer">
+              <div className="ruby-blog__about-site__container__credits__programmer-div__profile-div__social-ruby">
+                <DiRuby />
+              </div>
+            </a>
           </div>
         </div>
       </div>
