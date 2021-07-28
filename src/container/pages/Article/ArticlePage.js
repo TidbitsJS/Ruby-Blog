@@ -21,16 +21,10 @@ const ArticlePage = (props) => {
       if (article.articleId === articleId) {
         setArticleIndex(index);
         return article;
-      }
+      } else return "";
     });
     setArticleData(...theArticle);
-    console.log(
-      "The article",
-      theArticle,
-      articleIndex,
-      articles[articleIndex - 1],
-      articles[articleIndex + 1]
-    );
+
     window.scrollTo(0, 0);
   }, [articleId, articleIndex]);
 

@@ -53,7 +53,7 @@ const AuthorPage = (props) => {
                   />
                 );
               }
-            }
+            } else return "";
           })}
         </div>
       </div>

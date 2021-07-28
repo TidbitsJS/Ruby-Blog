@@ -62,7 +62,7 @@ function TagPage(props) {
                   {tag}
                 </div>
               );
-            }
+            } else return "";
           })}
         </div>
 
@@ -74,7 +74,7 @@ function TagPage(props) {
               } else {
                 return <BasicArticleCard data={article} key={index * 22} />;
               }
-            }
+            } else return "";
           })}
         </div>
       </div>
